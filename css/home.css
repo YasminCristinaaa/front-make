@@ -1,0 +1,249 @@
+/*===============================
+  SEÇÃO PRINCIPAL (HERO)
+================================*/
+.hero {
+  background: url('../img/propaganda.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--branco);
+  text-align: center;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*===============================
+  LISTA DE PRODUTOS
+================================*/
+.products {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  padding-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.products:hover {
+  transform: translateX(-10px);
+}
+
+.product {
+  flex: 0 0 auto;
+  width: 250px;
+  scroll-snap-align: start;
+  background-color: var(--branco);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
+
+.product h3 {
+  color: var(--rosa-forte);
+  margin: 0.8rem 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--preto);
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.description {
+  min-height: 40px;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/*===============================
+  CATEGORIAS EM DESTAQUE
+================================*/
+/* Container das categorias em destaque */
+.destaques .categorias {
+  display: flex; /* Organiza as categorias em linha */
+  flex-wrap: wrap; /* Permite que as categorias ocupem várias linhas, se necessário */
+  gap: 1rem; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens no contêiner */
+}
+
+/* Estilo padrão para cada categoria */
+.categoria {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c); /* Fundo com gradiente colorido */
+  border: 3px solid rgba(255, 255, 255, 0.8); /* Borda mais clara e translúcida */
+  padding: 1rem 2rem; /* Espaçamento interno (topo/inferior e laterais) */
+  border-radius: 20px; /* Bordas suavemente arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  color: white; /* Cor do texto */
+  cursor: pointer; /* Aponta como clicável */
+  
+  /* Transição suave para animações */
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  
+  /* Adiciona sombra para destacar o elemento */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito ao passar o mouse */
+.categoria:hover {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3); /* Inverte o gradiente no hover */
+  color: white; /* Mantém o texto branco no hover */
+  
+  /* Leve elevação para destacar o item */
+  transform: translateY(-5px);
+  
+  /* Sombra mais intensa no hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.categoria {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.categoria:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+
+/*===============================
+  SEÇÃO DE BENEFÍCIOS
+================================*/
+.benefits-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--rosa-claro);
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.benefit-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+  background-color: #e06287;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.benefit-icon:hover {
+  background-color: #c45673;
+}
+
+.benefit-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.benefit-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.3;
+}
+
+/*===============================
+  ANIMAÇÃO DO RODAPÉ
+================================*/
+footer {
+  background-color: var(--rosa-forte);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Alterações de animação em texto e ícones para melhorar a experiência de navegação */
+.footer p {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.footer p {
+  opacity: 1;
+}
