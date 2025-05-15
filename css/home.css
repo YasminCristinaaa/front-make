@@ -149,6 +149,12 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+.categoria {
+  display: inline-block; /* Para o link se comportar como bloco */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+
 
 .categoria {
   flex: 1;
