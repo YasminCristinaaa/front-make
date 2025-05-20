@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/home.css">
 
-  
-
   <style>     
     .hero {
       background: url('../img/bannerlabios.jpg') center/cover no-repeat;
@@ -27,17 +25,19 @@
 </head>
 <body>
 
+
+
+
   <!-- Cabeçalho -->
   <header>
     <div class="container header-content">
       <h1>Bella Makeup</h1>
 
-    <nav>
-  <a href="../index.html">Produtos</a>
-  <a href="../contato.html">Ouvidoria</a>
-  <a href="/sobrenos.html">Sobre Nós</a>
-</nav>
-
+      <nav>
+        <a href="../index.html">Produtos</a>
+        <a href="/sobrenos.html">Sobre Nós</a>
+        <a href="carrinho.html" id="cart-icon">🛒 Carrinho (<span id="cart-counter">0</span>)</a>
+      </nav>
     </div>
   </header>
 
@@ -100,7 +100,7 @@
         <h3>BT Batom Líquido Edição Especial</h3>
         <p class="description">Alta pigmentação, longa duração e textura aveludada com acabamento matte.</p>
         <p class="price">R$ 39,90</p>
-        <button class="btn">Adicionar</button>
+        <button class="btn" data-id="1" data-name="BT Batom Líquido" data-price="39.90">Adicionar</button>
       </div>
 
       <div class="product">
@@ -108,7 +108,7 @@
         <h3>Disney Wish Plush Valentino</h3>
         <p class="description">Textura mousse e aveludada para usar como batom e blush.</p>
         <p class="price">R$ 62,90</p>
-        <button class="btn">Adicionar</button>
+        <button class="btn" data-id="2" data-name="Disney Wish Plush" data-price="62.90">Adicionar</button>
       </div>
 
       <div class="product">
@@ -116,7 +116,7 @@
         <h3>Hidra Lábios Boca Rosa</h3>
         <p class="description">Hidratação profunda e conforto com acabamento natural.</p>
         <p class="price">R$ 49,90</p>
-        <button class="btn">Adicionar</button>
+        <button class="btn" data-id="3" data-name="Hidra Lábios" data-price="49.90">Adicionar</button>
       </div>
 
       <div class="product">
@@ -124,7 +124,7 @@
         <h3>Primer Labial Good Grip</h3>
         <p class="description">Preparação perfeita com hidratação e fixação para batons.</p>
         <p class="price">MX$ 197,97</p>
-        <button class="btn">Adicionar</button>
+        <button class="btn" data-id="4" data-name="Primer Labial" data-price="197.97">Adicionar</button>
       </div>
 
       <div class="product">
@@ -132,7 +132,7 @@
         <h3>Kit Delineador Labial So Lippy</h3>
         <p class="description">Contorno perfeito com textura suave e acabamento preciso.</p>
         <p class="price">MX$ 157,74</p>
-        <button class="btn">Adicionar</button>
+        <button class="btn" data-id="5" data-name="Kit Delineador Labial" data-price="157.74">Adicionar</button>
       </div>
 
     </div>
