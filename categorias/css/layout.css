@@ -1,0 +1,83 @@
+/*===============================
+  CABEÇALHO (HEADER)
+================================*/
+header {
+  background: linear-gradient(135deg, #9b4dca, #e06287);
+  color: var(--branco);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--branco);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Oculta o cabeçalho com fade e deslize */
+.header-hide {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Quando visível */
+header {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+/*===============================
+  RODAPÉ
+================================*/
+footer {
+  background-color: var(--rosa-forte);
+  color: var(--branco);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+/*===============================
+  BOTÕES PADRÃO
+================================*/
+.btn {
+  background: var(--rosa-forte);
+  color: var(--branco);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: var(--rosa-escuro);
+}
+
+/*===============================
+  TÍTULOS DAS SEÇÕES
+================================*/
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--rosa-escuro);
+}
+
+
